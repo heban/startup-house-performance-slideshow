@@ -22,6 +22,9 @@ import Logo from './components/Logo';
 // Images
 import Intro from './images/intro-unsplash.jpeg';
 import Yoda from './images/yoda.jpg';
+import BlankMobile from './images/blank-mobile.png';
+import FilledMobile from './images/filled-mobile.png';
+import Marketing from './images/marketing.jpg';
 
 // Styles
 import {
@@ -29,12 +32,16 @@ import {
   Mark,
   CenterBox,
   Link,
-  YodaImage
+  GenericImage,
+  MobileTimelineImage,
 } from './presentation.styled';
 
 preloader({
   Intro,
   Yoda,
+  BlankMobile,
+  FilledMobile,
+  Marketing,
 });
 
 // Require CSS
@@ -114,6 +121,25 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
         <Slide bgColor="primary">
+          <Heading margin="0 0 64px 0" textAlign="center" size={5} lineHeight={1} textColor="secondary">
+            Don't forget about <Mark>mobile devices</Mark>
+          </Heading>
+          <CenterBox>
+            <MobileTimelineImage src={BlankMobile} />
+            <MobileTimelineImage src={BlankMobile} />
+            <MobileTimelineImage src={BlankMobile} />
+            <MobileTimelineImage src={FilledMobile} />
+          </CenterBox>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading margin="0 0 48px 0" textAlign="center" size={6} lineHeight={1} textColor="secondary">
+            Try to explain to the team the negative effects of <div><Mark>big amount of features</Mark></div>
+          </Heading>
+          <CenterBox>
+            <GenericImage src={Marketing} />
+          </CenterBox>
+        </Slide>
+        <Slide bgColor="primary">
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
             Best practices
           </Heading>
@@ -166,10 +192,10 @@ export default class Presentation extends React.Component {
           </Appear>
         </Slide>
         <Slide bgColor="primary">
-          <Heading margin="0 0 64px 0" textAlign="left" size={5} lineHeight={1} textColor="secondary">
+          <Heading margin="0 0 64px 0" textAlign="center" size={5} lineHeight={1} textColor="secondary">
             Performance is <Mark>the most important</Mark> thing!
           </Heading>
-          <YodaImage src={Yoda} />
+          <GenericImage src={Yoda} />
         </Slide>
         <Slide bgImage={Intro} bgLighten={0.6}>
           <IntroBox>

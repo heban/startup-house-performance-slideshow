@@ -34,9 +34,16 @@ export const CenterBox = styled.div`
   align-items: center;
 `;
 
-export const YodaImage = styled(Image)`
+export const GenericImage = styled(Image)`
   && {
     margin: 32px auto 0 auto;
     max-width: 1000px;
+  }
+`;
+
+export const MobileTimelineImage = styled(Image)`
+  && {
+    margin: 0 16px 0 16px;
+    max-width: 240px;
   }
 `;
