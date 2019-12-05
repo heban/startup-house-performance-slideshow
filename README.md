@@ -1,5 +1,5 @@
 # startup-house-performance-slideshow
-Prezentacja stworzona dla Start-up House o różnych technikach optymalizacji stron i aplikacji WWW.
+Prezentacja stworzona dla Start-up House o różnych technikach optymalizacji stron i aplikacji webowych.
 
 ### Jak uruchomić?
 Najpierw instalujemy zależności poleceniem `yarn`.
