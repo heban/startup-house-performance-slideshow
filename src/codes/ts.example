@@ -1,0 +1,9 @@
+// Przykład funkcji w czystym JS
+function add(x, y) {
+  return x + y;
+}
+
+// Przykład tej samej funkcji w TypeScript
+function add(x: number, y: number): number {
+  return x + y;
+}

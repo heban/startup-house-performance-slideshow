@@ -1,0 +1,12 @@
+// imperatywnie
+const button = document.getElementById('btn');
+button.addEventListener('click', testowaFunkcja);
+
+// deklaratywnie
+function Button() {
+  return (
+    <button onClick={testowaFunkcja}>
+      Testowy przycisk;
+    </button>
+  );
+}

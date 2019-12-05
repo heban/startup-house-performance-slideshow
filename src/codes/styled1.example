@@ -1,0 +1,7 @@
+const paragraphStyles = {
+  fontSize: '2rem',
+  fontWeight: 'bold',
+  textAlign: 'center',
+};
+
+<p style={paragraphStyles}>Ostylowany paragraf</p>
