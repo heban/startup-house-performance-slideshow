@@ -26,6 +26,7 @@ import BlankMobile from './images/blank-mobile.png';
 import FilledMobile from './images/filled-mobile.png';
 import Marketing from './images/marketing.jpg';
 import Lighthouse from './images/lighthouse.png';
+import Addy from './images/addy.png';
 
 // Styles
 import {
@@ -46,6 +47,7 @@ preloader({
   FilledMobile,
   Marketing,
   Lighthouse,
+  Addy,
 });
 
 // Require CSS
@@ -121,12 +123,75 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
-            Why we should care about performance?
+            Why should we <Mark>care</Mark> about performance?
           </Heading>
+          <Appear>
+            <Text margin="64px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - <Mark>First impression</Mark> is the best impression
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Slow webapps can kill <Mark>conversions</Mark>
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Fast website === Better <Mark>user experience</Mark>
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Weak performance can affect a page <Mark>Google rank</Mark>
+            </Text>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            One more time, why performance is so <Mark>important</Mark>?
+          </Heading>
+          <Appear>
+            <Text margin="64px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - We want to serve our products <Mark>faster</Mark>
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - We don't want to piss off our <Mark>users</Mark>
+            </Text>
+          </Appear>
         </Slide>
         <Slide bgColor="primary">
           <Heading margin="0 0 64px 0" textAlign="center" size={5} lineHeight={1} textColor="secondary">
-            Don't forget about <Mark>mobile devices</Mark>
+            Don't forget about <Mark>mobile devices</Mark>!
+          </Heading>
+          <Text margin="64px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            - Every year, the use of mobile internet is <Mark>increasing</Mark>
+          </Text>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - For many, a mobile device is <Mark>the only way</Mark> to access the Internet
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Cellular networks are <Mark>slow</Mark> and have some limitations
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Mobile CPU is still <Mark>underpowered</Mark> compared to desktop
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Mobile browsers <Mark>!==</Mark> Desktop browsers
+            </Text>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading margin="0 0 48px 0" textAlign="center" size={5} lineHeight={1} textColor="secondary">
+            And this is how performance can look on <Mark>mobile devices</Mark>
           </Heading>
           <CenterBox>
             <MobileTimelineImage src={BlankMobile} />
@@ -134,6 +199,53 @@ export default class Presentation extends React.Component {
             <MobileTimelineImage src={BlankMobile} />
             <MobileTimelineImage src={FilledMobile} />
           </CenterBox>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading margin="0 0 16px 0" textAlign="left" size={6} lineHeight={1} textColor="secondary">
+            <Mark>State</Mark> of mobile webpages*
+          </Heading>
+          <Text margin="64px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            <Mark>Total size </Mark>of compressed assets (median):
+          </Text>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - <span style={{ display: 'inline-block', marginRight: '16px' }}>HTML -</span> <YellowMark>25.8</YellowMark> KB
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - <span style={{ display: 'inline-block', marginRight: '16px' }}>CSS -</span> <YellowMark>58.8</YellowMark> KB
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - <span style={{ display: 'inline-block', marginRight: '16px' }}>Fonts -</span> <YellowMark>102</YellowMark> KB
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - <span style={{ display: 'inline-block', marginRight: '16px' }}>JS -</span> <RedMark>385.9</RedMark> KB
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - <span style={{ display: 'inline-block', marginRight: '16px' }}>Images -</span> <RedMark>894.8</RedMark> KB
+            </Text>
+          </Appear>
+          <Text margin="64px 0 0" textAlign="left" textSize={24} textColor="secondary">
+            *Source: HTTP Archive 2019
+          </Text>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading margin="0 0 16px 0" textAlign="left" size={6} lineHeight={1} textColor="secondary">
+            JavaScript <Mark>processing on mobile devices</Mark>*
+          </Heading>
+          <CenterBox>
+            <GenericImage src={Addy} />
+          </CenterBox>
+          <Text margin="10px 0 0" textAlign="left" textSize={24} textColor="secondary">
+            *Source: Cost of JavaScript 2018 by Addy Osmani
+          </Text>
         </Slide>
         <Slide bgColor="primary">
           <Heading margin="0 0 48px 0" textAlign="center" size={6} lineHeight={1} textColor="secondary">
@@ -150,7 +262,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
-            Other techniques
+            Other <Mark>techniques</Mark>
           </Heading>
           <Text margin="64px 0 0" textAlign="left" textSize={28} textColor="secondary">
             - Server-side rendering (<Mark>SSR</Mark>)
@@ -173,12 +285,57 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
-            Let's talk about our homepage
+            Watch out for these <Mark>things</Mark>
+          </Heading>
+          <Appear>
+            <Text margin="64px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Video <Mark>backgrounds</Mark>
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Heavy "on <Mark>scroll</Mark>" logic 
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - <Mark>Canvas</Mark> calculations
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - A large number of <Mark>custom fonts</Mark>
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Transitions, animations etc. (<Link href="https://csstriggers.com/" rel="noopener noreferrer" target="_blank">csstriggers.com</Link>)
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - <Mark>Tracking</Mark> tools
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - <Mark>Frameworks limitations</Mark> and bad practices
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - <Mark>The variety</Mark> of mobile operating systems and browsers
+            </Text>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            Let's talk about <Mark>our homepage</Mark>
           </Heading>
         </Slide>
         <Slide bgColor="primary">
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
-            Start-up House homepage case
+            Start-up House <Mark>homepage case</Mark>
           </Heading>
           <Text margin="64px 0 0" textAlign="left" textSize={28} textColor="secondary">
             When the page was ready, PageSpeed from Google gave us about <RedMark>22</RedMark> points :(
@@ -196,29 +353,29 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
-            Start-up House homepage issues
+            Start-up House <Mark>homepage issues</Mark>
           </Heading>
           <Text margin="64px 0 0" textAlign="left" textSize={28} textColor="secondary">
-            - A large number of sections
+            - A <Mark>large</Mark> number of sections
           </Text>
           <Appear>
             <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
-              - Complicated components
+              - <Mark>Complicated</Mark> components
             </Text>
           </Appear>
           <Appear>
             <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
-              - Fancy animations
+              - Fancy <Mark>animations</Mark>
             </Text>
           </Appear>
           <Appear>
             <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
-              - Third-party libraries
+              - <Mark>Third-party</Mark> libraries
             </Text>
           </Appear>
           <Appear>
             <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
-              - A huge number of assets
+              - A huge number of <Mark>assets</Mark>
             </Text>
           </Appear>
           <Appear>
@@ -272,7 +429,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
-            Popular speed test tools for analyzing performance
+            Popular <Mark>speed test tools</Mark> for analyzing performance
           </Heading>
         </Slide>
         <Slide bgColor="primary">
