@@ -25,6 +25,7 @@ import Yoda from './images/yoda.jpg';
 import BlankMobile from './images/blank-mobile.png';
 import FilledMobile from './images/filled-mobile.png';
 import Marketing from './images/marketing.jpg';
+import Lighthouse from './images/lighthouse.png';
 
 // Styles
 import {
@@ -34,6 +35,8 @@ import {
   Link,
   GenericImage,
   MobileTimelineImage,
+  RedMark,
+  YellowMark,
 } from './presentation.styled';
 
 preloader({
@@ -42,6 +45,7 @@ preloader({
   BlankMobile,
   FilledMobile,
   Marketing,
+  Lighthouse,
 });
 
 // Require CSS
@@ -146,8 +150,125 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            Other techniques
+          </Heading>
+          <Text margin="64px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            - Server-side rendering (<Mark>SSR</Mark>)
+          </Text>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Accelerated mobile pages (<Mark>AMP</Mark>)
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Progressive web apps (<Mark>PWA</Mark>)
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - <Mark>VanillaJS</Mark>? <Mark>Svelte</Mark>?
+            </Text>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
             Let's talk about our homepage
           </Heading>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            Start-up House homepage case
+          </Heading>
+          <Text margin="64px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            When the page was ready, PageSpeed from Google gave us about <RedMark>22</RedMark> points :(
+          </Text>
+          <Appear>
+            <Text margin="32px 0 16px 0" textAlign="left" textSize={28} textColor="secondary">
+              Now we have about <YellowMark>70</YellowMark> points, and this not our final word, we still fight ;)
+            </Text>
+          </Appear>
+          <Appear>
+            <CenterBox>
+              <GenericImage src={Lighthouse} />
+            </CenterBox>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            Start-up House homepage issues
+          </Heading>
+          <Text margin="64px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            - A large number of sections
+          </Text>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Complicated components
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Fancy animations
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Third-party libraries
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - A huge number of assets
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Stimulus.js...
+            </Text>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            So what have we done?
+          </Heading>
+          <Text margin="64px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            There is <Mark>no magic</Mark> here. We have implemented a lot of improvements from previous sections.
+          </Text>
+          <Appear>
+            <Text margin="64px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - We have <Mark>divided one large package</Mark> containing all application controllers into smaller ones
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - We have <Mark>reduced a number of calculations</Mark> in different components (e.g. background transitions)
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - We have <Mark>extracted some components</Mark> from main bundle
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - We have <Mark>removed unnecessary third-party libraries</Mark> like font-awesome
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - We have <Mark>simplified some components</Mark> for mobile devices
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - We have <Mark>reduced a number of components</Mark> for mobile devices
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Some parts of our codebase run only when the user <Mark>scrolls to them</Mark>
+            </Text>
+          </Appear>
         </Slide>
         <Slide bgColor="primary">
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">

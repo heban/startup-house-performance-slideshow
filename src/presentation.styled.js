@@ -6,6 +6,8 @@ const colors = {
   secondary: '#fff',
   tertiary: '#0066ff',
   quaternary: '#9a9a9a',
+  error: '#f15c5c',
+  warning: '#f7b12f',
 };
 
 export const IntroBox = styled.div`
@@ -17,6 +19,18 @@ export const IntroBox = styled.div`
 
 export const Mark = styled.span`
   color: ${colors.tertiary};
+`;
+
+export const RedMark = styled(Mark)`
+  color: ${colors.error};
+  font-weight: bold;
+  font-size: 42px;
+`;
+
+export const YellowMark = styled(Mark)`
+  color: ${colors.warning};
+  font-weight: bold;
+  font-size: 42px;
 `;
 
 export const Link = styled.a`
