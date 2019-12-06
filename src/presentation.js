@@ -190,9 +190,17 @@ export default class Presentation extends React.Component {
           </Appear>
         </Slide>
         <Slide bgColor="primary">
+          <Heading margin="0" textAlign="center" size={5} lineHeight={1} textColor="secondary">
+            Mobile first approach means <Mark>performance first</Mark>!
+          </Heading>
+        </Slide>
+        <Slide bgColor="primary">
           <Heading margin="0 0 48px 0" textAlign="center" size={5} lineHeight={1} textColor="secondary">
             And this is how performance can look on <Mark>mobile devices</Mark>
           </Heading>
+          <Text margin="0 0 48px 0" textAlign="left" textSize={28} textColor="secondary">
+            First Contentful Paint (<Mark>FCP</Mark>)
+          </Text>
           <CenterBox>
             <MobileTimelineImage src={BlankMobile} />
             <MobileTimelineImage src={BlankMobile} />
@@ -257,8 +265,186 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide bgColor="primary">
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
-            Best practices
+            <Mark>Best</Mark> practices
           </Heading>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            Techniques for serving <Mark>images</Mark>
+          </Heading>
+          <Appear>
+            <Text margin="64px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Serve <Mark>responsive images</Mark>
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Use <Mark>CDNs</Mark> for images
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Optimize <Mark>images weight</Mark> (<Link href="https://compressor.io/" rel="noopener noreferrer" target="_blank">compressor.io</Link>)
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Use <Mark>webp</Mark> format (<Link href="https://webp-converter.com/" rel="noopener noreferrer" target="_blank">webp-converter.com</Link>)
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Convert images with similar size to <Mark>spritesheet</Mark> (<Link href="https://iconizr.com/" rel="noopener noreferrer" target="_blank">iconizr.com</Link>)
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - <Mark>Lazy-load</Mark> larger images (<Link href="https://web.dev/native-lazy-loading/" rel="noopener noreferrer" target="_blank">web.dev/native-lazy-loading/</Link>)
+            </Text>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            <Mark>CSS</Mark> good practices
+          </Heading>
+          <Appear>
+            <Text margin="64px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - <Mark>Compress</Mark> CSS
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - <Mark>Extract</Mark> critical styles (<Link href="https://github.com/filamentgroup/criticalCSS" rel="noopener noreferrer" target="_blank">criticalCSS</Link>)
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - <Mark>Preload</Mark> important CSS
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - <Mark>Load asynchronously</Mark> non-critical CSS (<Link href="https://github.com/filamentgroup/loadCSS" rel="noopener noreferrer" target="_blank">loadCSS</Link>)
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - <Mark>Remove</Mark> unused styles (<Link href="https://uncss-online.com/" rel="noopener noreferrer" target="_blank">uncss-online.com</Link>)
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Try to <Mark>avoid</Mark> CSS frameworks
+            </Text>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            <Mark>JavaScript</Mark> good practices
+          </Heading>
+          <Appear>
+            <Text margin="64px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - <Mark>Minify</Mark> scripts
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - <Mark>Defer non-critical</Mark> scripts
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Use <Mark>nomodule</Mark> attribute to load polyfills for old browsers
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Reduce JS payloads with <Mark>tree-shaking</Mark> (webpack, rollup)
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Reduce JS payloads with <Mark>code-splitting</Mark> (webpack, dynamic imports)
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Use <Mark>bundle analyzer</Mark> to investigate large packages
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Use <Mark>framework-related</Mark> good practices
+            </Text>
+          </Appear>
+          <Appear>
+            <Heading margin="64px 0 0" textAlign="center" size={6} lineHeight={1} textColor="secondary">
+              Send <Mark>less JavaScript</Mark> and everyone will be happy!
+            </Heading>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            <Mark>General</Mark> good practices, part I
+          </Heading>
+          <Appear>
+            <Text margin="64px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Send <Mark>less assets</Mark>
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - <Mark>Lazy-load</Mark> non-critical assets
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - <Mark>Preload</Mark> or <Mark>Prefetch</Mark> critical assets
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Avoid huge amount of <Mark>HTTP requests</Mark>
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Deliver a <Mark>production bundle</Mark> for end-users
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Try to avoid <Mark>third-party libraries</Mark>
+            </Text>
+          </Appear>
+        </Slide>
+        <Slide bgColor="primary">
+          <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
+            <Mark>General</Mark> good practices, part II
+          </Heading>
+          <Text margin="64px 0 0" textAlign="left" textSize={28} textColor="secondary">
+            - Optimize custom <Mark>web fonts loading</Mark>
+          </Text>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Avoid an excessive <Mark>DOM size</Mark>
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Avoid HTML5 features like <Mark>geolocation and notifications</Mark>
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Use <Mark>HTTP/2</Mark>
+            </Text>
+          </Appear>
+          <Appear>
+            <Text margin="32px 0 0" textAlign="left" textSize={28} textColor="secondary">
+              - Use <Mark>HTTPS</Mark>
+            </Text>
+          </Appear>
         </Slide>
         <Slide bgColor="primary">
           <Heading textAlign="left" size={5} lineHeight={1} textColor="secondary">
